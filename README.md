@@ -26,6 +26,7 @@ Dark-themed portfolio showcasing my work in AI systems, multi-agent platforms, a
 | **[Archon](https://archon.works)** | Multi-agent AI delivery platform — prompts to versioned executions with artifacts, live previews, and governance | 744+ commits |
 | **[claude-usage-monitor](https://github.com/aiedwardyi/claude-usage-monitor)** | Terminal statusline for real-time usage tracking | Open Source |
 | **Medical AI** | Real-time melanoma detection for Mohs surgery | Patent Pending |
+| **[Pyi-thon](https://github.com/aiedwardyi/pyi-thon)** | Gamified Python learning platform — 30 progressive levels, in-browser code execution via Pyodide, AI-powered evaluation | Open Source |
 | **Quorum** | Multi-AI group chat for consensus-driven decision making | Building Now |
 
 ## Stack
