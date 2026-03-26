@@ -5,6 +5,7 @@ import {
   Monitor,
   Microscope,
   MessageSquare,
+  GraduationCap,
   Code2,
 } from "lucide-react";
 import BentoCard from "./BentoCard";
@@ -278,8 +279,66 @@ export default function Projects() {
             </div>
           </BentoCard>
 
-          {/* Capabilities */}
+          {/* Pyi-thon */}
           <BentoCard delay={0.5}>
+            <CardIcon>
+              <GraduationCap
+                size={20}
+                strokeWidth={1.5}
+                style={{ color: "var(--gold)" }}
+              />
+            </CardIcon>
+            <div
+              className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
+              style={{ color: "#888" }}
+            >
+              Open Source
+            </div>
+            <h3 className="text-[22px] font-bold mb-2.5 text-white">
+              Pyi-thon
+            </h3>
+            <p
+              className="text-[13px] leading-[1.7]"
+              style={{ color: "var(--text-muted)" }}
+            >
+              Gamified Python learning platform. 30 progressive levels, real
+              code execution in-browser via Pyodide, AI-powered evaluation.
+              Zero setup, completely free.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              <TechPill>React</TechPill>
+              <TechPill>Pyodide</TechPill>
+              <TechPill>AI Eval</TechPill>
+              <TechPill>Gamification</TechPill>
+            </div>
+            <div className="flex items-center gap-3 mt-4">
+              <a
+                href="https://pyithon.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono transition-opacity hover:opacity-80"
+                style={{ color: "var(--gold)" }}
+              >
+                pyithon.com →
+              </a>
+              <span
+                className="w-px h-4"
+                style={{ background: "var(--border)" }}
+              />
+              <a
+                href="https://github.com/aiedwardyi/pyi-thon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono transition-opacity hover:opacity-80"
+                style={{ color: "var(--gold)" }}
+              >
+                GitHub →
+              </a>
+            </div>
+          </BentoCard>
+
+          {/* Capabilities */}
+          <BentoCard delay={0.6}>
             <CardIcon>
               <Code2 size={20} strokeWidth={1.5} style={{ color: "var(--gold)" }} />
             </CardIcon>
