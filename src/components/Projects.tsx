@@ -210,7 +210,7 @@ export default function Projects() {
                 className="text-[11px] font-mono transition-opacity hover:opacity-80"
                 style={{ color: "var(--gold)" }}
               >
-                View on GitHub →
+                GitHub →
               </a>
             </div>
           </BentoCard>
@@ -319,7 +319,7 @@ export default function Projects() {
                 className="text-[11px] font-mono transition-opacity hover:opacity-80"
                 style={{ color: "var(--gold)" }}
               >
-                pyithon.com →
+                Pyithon.com →
               </a>
               <span
                 className="w-px h-4"
