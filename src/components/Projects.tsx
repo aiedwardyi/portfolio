@@ -313,6 +313,19 @@ export default function Projects() {
             </div>
             <div className="flex items-center gap-3 mt-4">
               <a
+                href="https://pyithon.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono transition-opacity hover:opacity-80"
+                style={{ color: "var(--gold)" }}
+              >
+                pyithon.com →
+              </a>
+              <span
+                className="w-px h-4"
+                style={{ background: "var(--border)" }}
+              />
+              <a
                 href="https://github.com/aiedwardyi/pyi-thon"
                 target="_blank"
                 rel="noopener noreferrer"
