@@ -8,10 +8,16 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import RevealOnScroll from "@/components/RevealOnScroll";
 
 const ParticleNetwork = dynamic(() => import("@/components/ParticleNetwork"), {
   ssr: false,
 });
+
+const ProjectConstellation = dynamic(
+  () => import("@/components/ProjectConstellation"),
+  { ssr: false }
+);
 
 function SectionDivider() {
   return (
@@ -79,6 +85,38 @@ export default function ClientPage() {
       <About />
       <SectionDivider />
       <Experience />
+      <SectionDivider />
+
+      {/* Project Constellation */}
+      <section className="py-28 md:py-32 px-7">
+        <div className="max-w-[1100px] mx-auto relative z-10">
+          <RevealOnScroll>
+            <div
+              className="font-mono text-[10px] tracking-[6px] uppercase mb-4"
+              style={{ color: "var(--gold)" }}
+            >
+              How It Connects
+            </div>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <h2 className="font-sans text-[36px] md:text-[40px] font-extrabold tracking-[-1.5px] mb-4 text-white">
+              The Network
+            </h2>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.15}>
+            <p
+              className="text-[15px] leading-[1.8] mb-10 max-w-[500px]"
+              style={{ color: "var(--text-muted)" }}
+            >
+              Every project feeds into the next. Hover to trace the connections.
+            </p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <ProjectConstellation />
+          </RevealOnScroll>
+        </div>
+      </section>
+
       <SectionDivider />
       <Contact />
 

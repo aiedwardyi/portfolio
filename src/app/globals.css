@@ -108,6 +108,12 @@ body {
   to { transform: translateX(-50%); }
 }
 
+/* Kinetic text cursor blink */
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

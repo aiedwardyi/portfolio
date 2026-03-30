@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import KineticText from "./KineticText";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -24,9 +25,11 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1, ease }}
           className="font-sans text-[clamp(40px,7vw,80px)] font-extrabold leading-[1.0] tracking-[-1.5px] md:tracking-[-3px] mb-7"
         >
-          <span className="block">I build AI systems</span>
           <span className="block">
-            that{" "}
+            <KineticText text="I build AI systems" delay={1200} charDelay={45} />
+          </span>
+          <span className="block">
+            <KineticText text="that " delay={2400} charDelay={45} />
             <span
               className="inline-block"
               style={{
@@ -38,7 +41,7 @@ export default function Hero() {
                 animation: "shimmer 3s ease-in-out infinite",
               }}
             >
-              ship.
+              <KineticText text="ship." delay={2700} charDelay={70} />
             </span>
           </span>
         </motion.h1>

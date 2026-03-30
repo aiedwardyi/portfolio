@@ -7,6 +7,7 @@ import {
   MessageSquare,
   GraduationCap,
   Code2,
+  FlaskConical,
 } from "lucide-react";
 import BentoCard from "./BentoCard";
 import AnimatedCounter from "./AnimatedCounter";
@@ -337,8 +338,47 @@ export default function Projects() {
             </div>
           </BentoCard>
 
+          {/* Yi Labs */}
+          <BentoCard delay={0.6} borderColor="rgba(201,168,76,0.08)">
+            <CardIcon>
+              <FlaskConical size={20} strokeWidth={1.5} style={{ color: "var(--gold)" }} />
+            </CardIcon>
+            <div
+              className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
+              style={{ color: "var(--gold)" }}
+            >
+              Research Lab
+            </div>
+            <h3 className="text-[22px] font-bold mb-2.5 text-white">
+              Yi Labs
+            </h3>
+            <p
+              className="text-[13px] leading-[1.7]"
+              style={{ color: "var(--text-muted)" }}
+            >
+              The research hub connecting all projects. Multi-agent orchestration, computer vision, consensus intelligence, and developer tooling — explored through an immersive web experience.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              <TechPill>Next.js</TechPill>
+              <TechPill>Framer Motion</TechPill>
+              <TechPill>Canvas</TechPill>
+              <TechPill>7 Themes</TechPill>
+            </div>
+            <div className="mt-4">
+              <a
+                href="https://github.com/aiedwardyi/yi-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono transition-opacity hover:opacity-80"
+                style={{ color: "var(--gold)" }}
+              >
+                Explore Yi Labs →
+              </a>
+            </div>
+          </BentoCard>
+
           {/* Capabilities */}
-          <BentoCard delay={0.6}>
+          <BentoCard delay={0.7}>
             <CardIcon>
               <Code2 size={20} strokeWidth={1.5} style={{ color: "var(--gold)" }} />
             </CardIcon>
