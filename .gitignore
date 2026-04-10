@@ -49,3 +49,7 @@ next-env.d.ts
 HANDOFF.md
 docs/
 og-preview.png
+
+# local working files (test screenshots, translation review docs)
+/*.png
+/korean-review.md

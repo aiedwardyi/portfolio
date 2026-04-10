@@ -3,16 +3,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-];
+import Link from "next/link";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { locale, dict } = useLocale();
+
+  const links = [
+    { href: "#projects", label: dict.nav.projects },
+    { href: "#about", label: dict.nav.about },
+    { href: "#experience", label: dict.nav.experience },
+    { href: "#contact", label: dict.nav.contact },
+  ];
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
@@ -52,29 +55,32 @@ export default function Navigation() {
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex gap-9 list-none">
-            {links.map((link) => (
-              <li key={link.href}>
-                <button
-                  onClick={() => scrollTo(link.href)}
-                  className="relative text-[12px] font-medium tracking-[1.5px] uppercase transition-colors duration-300 cursor-pointer bg-transparent border-none"
-                  style={{ color: "var(--text-muted)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "var(--text)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "var(--text-muted)")
-                  }
-                >
-                  {link.label}
-                  <span
-                    className="absolute -bottom-1.5 left-0 h-px w-0 hover:w-full transition-all duration-300"
-                    style={{ background: "var(--gold)" }}
-                  />
-                </button>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-9">
+            <ul className="flex gap-9 list-none">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <button
+                    onClick={() => scrollTo(link.href)}
+                    className="relative text-[12px] font-medium tracking-[1.5px] uppercase transition-colors duration-300 cursor-pointer bg-transparent border-none"
+                    style={{ color: "var(--text-muted)" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "var(--text)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = "var(--text-muted)")
+                    }
+                  >
+                    {link.label}
+                    <span
+                      className="absolute -bottom-1.5 left-0 h-px w-0 hover:w-full transition-all duration-300"
+                      style={{ background: "var(--gold)" }}
+                    />
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <LocaleToggle locale={locale} />
+          </div>
 
           {/* Mobile hamburger */}
           <button
@@ -114,10 +120,58 @@ export default function Navigation() {
                   {link.label}
                 </button>
               ))}
+              <div
+                className="pt-2 border-t"
+                style={{ borderColor: "var(--border)" }}
+              >
+                <LocaleToggle locale={locale} />
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function LocaleToggle({ locale }: { locale: "en" | "ko" }) {
+  const baseStyle: React.CSSProperties = {
+    fontFamily: "var(--font-jetbrains)",
+    letterSpacing: "1.5px",
+  };
+  const activeStyle: React.CSSProperties = {
+    ...baseStyle,
+    color: "var(--gold)",
+  };
+  const inactiveStyle: React.CSSProperties = {
+    ...baseStyle,
+    color: "var(--text-muted)",
+  };
+
+  return (
+    <div
+      className="flex items-center gap-2 text-[11px] font-medium uppercase select-none"
+      aria-label="Language toggle"
+    >
+      <Link
+        href="/"
+        prefetch={false}
+        scroll={false}
+        className="transition-colors duration-300 hover:opacity-80"
+        style={locale === "en" ? activeStyle : inactiveStyle}
+      >
+        EN
+      </Link>
+      <span style={{ color: "var(--border)" }}>/</span>
+      <Link
+        href="/ko"
+        prefetch={false}
+        scroll={false}
+        className="transition-colors duration-300 hover:opacity-80"
+        style={locale === "ko" ? activeStyle : inactiveStyle}
+      >
+        KO
+      </Link>
+    </div>
   );
 }

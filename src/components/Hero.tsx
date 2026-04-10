@@ -1,10 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function Hero() {
+  const { locale, dict } = useLocale();
+  const t = dict.hero;
+  // Korean characters fill ~1em x 1em, so they need looser leading and
+  // neutral letter-spacing. Latin display type wants tight leading and
+  // negative tracking for the dramatic look.
+  const headlineClass =
+    locale === "ko"
+      ? "font-sans text-[clamp(40px,7vw,80px)] font-extrabold leading-[1.2] tracking-normal mb-9"
+      : "font-sans text-[clamp(40px,7vw,80px)] font-extrabold leading-[1.0] tracking-[-1.5px] md:tracking-[-3px] mb-7";
   return (
     <section className="min-h-screen flex flex-col justify-center pt-20 relative px-7">
       <div className="max-w-[1100px] mx-auto w-full relative z-10">
@@ -15,18 +25,18 @@ export default function Hero() {
           className="font-mono text-[11px] tracking-[6px] uppercase mb-7"
           style={{ color: "var(--gold)" }}
         >
-          edwardyi.dev
+          {t.eyebrow}
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1, ease }}
-          className="font-sans text-[clamp(40px,7vw,80px)] font-extrabold leading-[1.0] tracking-[-1.5px] md:tracking-[-3px] mb-7"
+          className={headlineClass}
         >
-          <span className="block">I build AI systems</span>
+          <span className="block">{t.headlineLine1}</span>
           <span className="block">
-            that{" "}
+            {t.headlineLine2Prefix}
             <span
               className="inline-block"
               style={{
@@ -38,7 +48,7 @@ export default function Hero() {
                 animation: "shimmer 3s ease-in-out infinite",
               }}
             >
-              ship.
+              {t.headlineHighlight}
             </span>
           </span>
         </motion.h1>
@@ -50,7 +60,7 @@ export default function Hero() {
           className="text-[17px] max-w-[500px] leading-[1.8] mb-11"
           style={{ color: "var(--text-muted)" }}
         >
-          Founder and senior AI engineer. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems, developer tools, and medical AI with a patent pending.
+          {t.description}
         </motion.p>
 
         <motion.div
@@ -81,7 +91,7 @@ export default function Hero() {
               (e.currentTarget.style.boxShadow = "none")
             }
           >
-            View My Work
+            {t.viewMyWork}
           </a>
           <a
             href="#contact"
@@ -109,7 +119,7 @@ export default function Hero() {
               e.currentTarget.style.boxShadow = "none";
             }}
           >
-            Get in Touch
+            {t.getInTouch}
           </a>
         </motion.div>
       </div>
@@ -134,7 +144,7 @@ export default function Hero() {
           writingMode: "vertical-rl",
         }}
       >
-        Scroll
+        {t.scroll}
       </motion.span>
     </section>
   );

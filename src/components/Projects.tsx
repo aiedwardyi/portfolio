@@ -11,6 +11,7 @@ import {
 import BentoCard from "./BentoCard";
 import AnimatedCounter from "./AnimatedCounter";
 import RevealOnScroll from "./RevealOnScroll";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 function CardIcon({ children }: { children: React.ReactNode }) {
   return (
@@ -50,6 +51,8 @@ function TechPill({ children }: { children: React.ReactNode }) {
 }
 
 export default function Projects() {
+  const { dict } = useLocale();
+  const t = dict.projects;
   return (
     <section id="projects" className="py-28 md:py-32 px-7">
       <div className="max-w-[1100px] mx-auto relative z-10">
@@ -58,12 +61,12 @@ export default function Projects() {
             className="font-mono text-[10px] tracking-[6px] uppercase mb-4"
             style={{ color: "var(--gold)" }}
           >
-            What I&apos;m Building
+            {t.eyebrow}
           </div>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
           <h2 className="font-sans text-[36px] md:text-[40px] font-extrabold tracking-[-1.5px] mb-14 text-white">
-            Projects
+            {t.heading}
           </h2>
         </RevealOnScroll>
 
@@ -81,17 +84,14 @@ export default function Projects() {
               className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
               style={{ color: "var(--gold)" }}
             >
-              Featured
+              {t.badges.featured}
             </div>
             <h3 className="text-[22px] font-bold mb-2.5 text-white">Archon</h3>
             <p
               className="text-[13px] leading-[1.7]"
               style={{ color: "var(--text-muted)" }}
             >
-              Multi-agent AI platform that turns prompts into production
-              applications. Live previews, automated evaluation loops, and
-              model-agnostic orchestration across Claude, GPT, Gemini, and
-              local models.
+              {t.archon.description}
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
               <TechPill>Python</TechPill>
@@ -108,7 +108,7 @@ export default function Projects() {
                 </span>
               </span>
               <span className="text-[11px]" style={{ color: "#555" }}>
-                commits
+                {t.archon.commitsLabel}
               </span>
               <span
                 className="w-px h-6 mx-2"
@@ -132,7 +132,7 @@ export default function Projects() {
               <div>
                 <AnimatedCounter
                   target={8}
-                  suffix=" years"
+                  suffix={t.stats.yearsSuffix}
                   className="text-[48px] md:text-[52px] font-black text-white leading-none"
                   suffixClassName="text-[18px] font-normal"
 
@@ -141,7 +141,7 @@ export default function Projects() {
                   className="text-[13px] mt-1.5"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  Leading development teams
+                  {t.stats.yearsLabel}
                 </div>
               </div>
               <div className="h-px" style={{ background: "var(--border)" }} />
@@ -156,7 +156,7 @@ export default function Projects() {
                   className="text-[13px] mt-1.5"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  Projects shipped
+                  {t.stats.projectsLabel}
                 </div>
               </div>
               <div className="h-px" style={{ background: "var(--border)" }} />
@@ -171,7 +171,7 @@ export default function Projects() {
                   className="text-[13px] mt-1.5"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  Developers at peak
+                  {t.stats.developersLabel}
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function Projects() {
               className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
               style={{ color: "#888" }}
             >
-              Open Source
+              {t.badges.openSource}
             </div>
             <h3 className="text-[22px] font-bold mb-2.5 text-white">
               claude-usage-monitor
@@ -195,7 +195,7 @@ export default function Projects() {
               className="text-[13px] leading-[1.7]"
               style={{ color: "var(--text-muted)" }}
             >
-              Terminal statusline for Claude Code. Real-time quota tracking, zero dependencies. Built for devs who live in the CLI.
+              {t.monitor.description}
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
               <TechPill>Python</TechPill>
@@ -224,16 +224,16 @@ export default function Projects() {
               className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
               style={{ color: "var(--gold)" }}
             >
-              Patent Pending
+              {t.badges.patentPending}
             </div>
             <h3 className="text-[22px] font-bold mb-2.5 text-white">
-              Medical AI
+              {t.medical.title}
             </h3>
             <p
               className="text-[13px] leading-[1.7]"
               style={{ color: "var(--text-muted)" }}
             >
-              Medical AI for dermatological pathology. Patent pending. Clinical collaboration active.
+              {t.medical.description}
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
               <TechPill>Python</TechPill>
@@ -262,15 +262,14 @@ export default function Projects() {
                   animation: "pulse-gold 2s ease-in-out infinite",
                 }}
               />
-              Building Now
+              {t.badges.buildingNow}
             </div>
             <h3 className="text-[22px] font-bold mb-2.5 text-white">Quorum</h3>
             <p
               className="text-[13px] leading-[1.7]"
               style={{ color: "var(--text-muted)" }}
             >
-              Multi-AI group chat for consensus. Multiple models discuss topics
-              together and converge through structured rounds.
+              {t.quorum.description}
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
               <TechPill>Next.js</TechPill>
@@ -292,7 +291,7 @@ export default function Projects() {
               className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
               style={{ color: "#888" }}
             >
-              Open Source
+              {t.badges.openSource}
             </div>
             <h3 className="text-[22px] font-bold mb-2.5 text-white">
               Pyi-thon
@@ -301,9 +300,7 @@ export default function Projects() {
               className="text-[13px] leading-[1.7]"
               style={{ color: "var(--text-muted)" }}
             >
-              Gamified Python learning platform. 30 progressive levels, real
-              code execution in-browser via Pyodide, AI-powered evaluation.
-              Zero setup, completely free.
+              {t.pyithon.description}
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
               <TechPill>React</TechPill>
@@ -346,17 +343,10 @@ export default function Projects() {
               className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
               style={{ color: "#555" }}
             >
-              What I Work With
+              {t.badges.whatIWorkWith}
             </div>
             <div className="flex flex-col gap-3 mt-2">
-              {[
-                "Multi-Agent Systems",
-                "LLM Orchestration",
-                "Computer Vision",
-                "Full-Stack Product Engineering",
-                "Evals & Deployment",
-                "Blockchain & DeFi",
-              ].map((item) => (
+              {t.capabilities.map((item) => (
                 <div
                   key={item}
                   className="text-[13px] flex items-center gap-2.5"

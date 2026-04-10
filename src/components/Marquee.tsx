@@ -1,17 +1,8 @@
 "use client";
 
-const items = [
-  "AI Engineering",
-  "Multi-Agent Systems",
-  "Computer Vision",
-  "Blockchain",
-  "Patent Pending",
-  "Full-Stack",
-  "Founder",
-  "200+ Projects Shipped",
-];
+import { useLocale } from "@/i18n/LocaleProvider";
 
-function MarqueeContent() {
+function MarqueeContent({ items }: { items: string[] }) {
   return (
     <>
       {items.map((item, i) => (
@@ -30,6 +21,8 @@ function MarqueeContent() {
 }
 
 export default function Marquee() {
+  const { dict } = useLocale();
+  const items = dict.marquee;
   return (
     <div
       className="overflow-hidden py-5 border-y"
@@ -40,13 +33,13 @@ export default function Marquee() {
         style={{ animation: "marquee 35s linear infinite" }}
       >
         <div className="flex shrink-0">
-          <MarqueeContent />
+          <MarqueeContent items={items} />
         </div>
         <div className="flex shrink-0">
-          <MarqueeContent />
+          <MarqueeContent items={items} />
         </div>
         <div className="flex shrink-0">
-          <MarqueeContent />
+          <MarqueeContent items={items} />
         </div>
       </div>
     </div>

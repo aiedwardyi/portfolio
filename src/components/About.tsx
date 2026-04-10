@@ -2,6 +2,7 @@
 
 import { Send, Wrench, Users } from "lucide-react";
 import RevealOnScroll from "./RevealOnScroll";
+import { renderSegments, useLocale } from "@/i18n/LocaleProvider";
 
 function ValueCard({
   icon,
@@ -53,6 +54,8 @@ function ValueCard({
 }
 
 export default function About() {
+  const { dict } = useLocale();
+  const t = dict.about;
   const iconProps = {
     size: 16,
     strokeWidth: 1.5,
@@ -67,48 +70,24 @@ export default function About() {
             className="font-mono text-[10px] tracking-[6px] uppercase mb-4"
             style={{ color: "var(--gold)" }}
           >
-            Who I Am
+            {t.eyebrow}
           </div>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
           <h2 className="font-sans text-[36px] md:text-[40px] font-extrabold tracking-[-1.5px] mb-14 text-white">
-            About
+            {t.heading}
           </h2>
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
           <RevealOnScroll delay={0.2}>
             <div className="text-[16px] leading-[1.9]" style={{ color: "var(--text-muted)" }}>
-              <p>
-                I spent{" "}
-                <strong className="text-[#ccc] font-semibold">
-                  8 years leading a blockchain development company
-                </strong>{" "}
-                — 200+ products shipped, a 90+ developer organization, and clients who deployed{" "}
-                <em className="not-italic" style={{ color: "var(--gold)" }}>
-                  $167M
-                </em>{" "}
-                in capital on infrastructure we built.
-              </p>
-              <br />
-              <p>
-                I now build{" "}
-                <strong className="text-[#ccc] font-semibold">AI products</strong>{" "}
-                full-time — from multi-agent platforms
-                to developer CLI tools to a medical AI system with a{" "}
-                <em className="not-italic" style={{ color: "var(--gold)" }}>
-                  patent pending
-                </em>
-                .
-              </p>
-              <br />
-              <p>
-                I build in public. If you care about shipping real products,{" "}
-                <strong className="text-[#ccc] font-semibold">
-                  let&apos;s build something together
-                </strong>
-                .
-              </p>
+              {t.paragraphs.map((segments, i) => (
+                <div key={i}>
+                  {i > 0 && <br />}
+                  <p>{renderSegments(segments)}</p>
+                </div>
+              ))}
             </div>
           </RevealOnScroll>
 
@@ -116,18 +95,18 @@ export default function About() {
             <div className="flex flex-col gap-4">
               <ValueCard
                 icon={<Send {...iconProps} />}
-                title="Ship First"
-                description="I optimize for shipped products, real users, and feedback loops — not demoware."
+                title={t.values.ship.title}
+                description={t.values.ship.description}
               />
               <ValueCard
                 icon={<Wrench {...iconProps} />}
-                title="Tool Builder"
-                description="Every tool I build started as a problem I hit personally. The best ones become daily infrastructure."
+                title={t.values.tool.title}
+                description={t.values.tool.description}
               />
               <ValueCard
                 icon={<Users {...iconProps} />}
-                title="High Ownership"
-                description="I think in outcomes, not functions — product, engineering, hiring, and execution all have to line up."
+                title={t.values.ownership.title}
+                description={t.values.ownership.description}
               />
             </div>
           </RevealOnScroll>

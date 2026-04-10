@@ -8,6 +8,8 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import { LocaleProvider } from "@/i18n/LocaleProvider";
+import type { Dictionary, Locale } from "@/i18n/types";
 
 const ParticleNetwork = dynamic(() => import("@/components/ParticleNetwork"), {
   ssr: false,
@@ -25,9 +27,15 @@ function SectionDivider() {
   );
 }
 
-export default function ClientPage() {
+export default function ClientPage({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
   return (
-    <>
+    <LocaleProvider locale={locale} dict={dict}>
       {/* Film grain */}
       <div className="film-grain" />
 
@@ -91,9 +99,9 @@ export default function ClientPage() {
           className="text-[11px] font-mono tracking-[2px]"
           style={{ color: "#333" }}
         >
-          Designed & built by Edward Yi · 2026
+          {dict.footer}
         </p>
       </footer>
-    </>
+    </LocaleProvider>
   );
 }

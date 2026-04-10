@@ -2,6 +2,7 @@
 
 import { Send, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import RevealOnScroll from "./RevealOnScroll";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 const contacts = [
   {
@@ -37,6 +38,8 @@ const contacts = [
 ];
 
 export default function Contact() {
+  const { dict } = useLocale();
+  const t = dict.contact;
   return (
     <section id="contact" className="py-28 md:py-32 px-7">
       <div className="max-w-[1100px] mx-auto relative z-10">
@@ -45,12 +48,12 @@ export default function Contact() {
             className="font-mono text-[10px] tracking-[6px] uppercase mb-4"
             style={{ color: "var(--gold)" }}
           >
-            Let&apos;s Connect
+            {t.eyebrow}
           </div>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
           <h2 className="font-sans text-[36px] md:text-[40px] font-extrabold tracking-[-1.5px] mb-14 text-white">
-            Get in Touch
+            {t.heading}
           </h2>
         </RevealOnScroll>
 

@@ -1,41 +1,12 @@
 "use client";
 
 import RevealOnScroll from "./RevealOnScroll";
-
-const timeline = [
-  {
-    period: "2026 — Present",
-    role: "Independent AI Engineer & Founder",
-    company: "Seoul, South Korea",
-    desc: "Building AI products full-time. Archon (multi-agent delivery platform), medical AI (patent pending), developer tools. Full-stack AI engineering across LLM orchestration, computer vision, and multi-agent systems.",
-  },
-  {
-    period: "2017 — 2026",
-    role: "President",
-    company: "Rock'n'Block — Blockchain Development Company",
-    desc: "90+ developer organization, 200+ projects shipped. Partners raised $167M. Built DeFi protocols, crypto wallets, NFT marketplaces, and data streaming infrastructure.",
-  },
-  {
-    period: "2014 — 2017",
-    role: "CEO",
-    company: "HitecLED — LED Solutions",
-    desc: "Founded and operated LED lighting solutions company in Austin, TX. Hardware and software product development, supply chain management, and B2B sales.",
-  },
-  {
-    period: "2013",
-    role: "Graduate",
-    company: "The University of Texas at Austin",
-    desc: "Hook 'em. 🤘",
-  },
-  {
-    period: "2003",
-    role: "First Servers · Age 14",
-    company: "Counter-Strike & College",
-    desc: "Ran two 32-player CS mod servers — both full 24/7. Rented dedicated servers, visited data centers, and monetized access. Started college the same year.",
-  },
-];
+import { useLocale } from "@/i18n/LocaleProvider";
 
 export default function Experience() {
+  const { dict } = useLocale();
+  const t = dict.experience;
+  const timeline = t.timeline;
   return (
     <section id="experience" className="py-28 md:py-32 px-7">
       <div className="max-w-[1100px] mx-auto relative z-10">
@@ -44,12 +15,12 @@ export default function Experience() {
             className="font-mono text-[10px] tracking-[6px] uppercase mb-4"
             style={{ color: "var(--gold)" }}
           >
-            Where I&apos;ve Been
+            {t.eyebrow}
           </div>
         </RevealOnScroll>
         <RevealOnScroll delay={0.1}>
           <h2 className="font-sans text-[36px] md:text-[40px] font-extrabold tracking-[-1.5px] mb-14 text-white">
-            Experience
+            {t.heading}
           </h2>
         </RevealOnScroll>
 
@@ -104,7 +75,7 @@ export default function Experience() {
                   {item.company}
                 </div>
                 <div className="text-[13px] leading-[1.7]" style={{ color: "var(--text-muted)" }}>
-                  {item.desc}
+                  {item.description}
                 </div>
               </div>
             ))}
