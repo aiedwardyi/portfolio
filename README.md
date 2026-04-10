@@ -31,7 +31,7 @@ Dark-themed portfolio showcasing my work in AI systems, multi-agent platforms, a
 
 ## Stack
 
-**Framework** — Next.js 15 &nbsp;·&nbsp; React 19 &nbsp;·&nbsp; Tailwind CSS v4
+**Framework** — Next.js 16 &nbsp;·&nbsp; React 19 &nbsp;·&nbsp; Tailwind CSS v4
 
 **Motion** — Framer Motion &nbsp;·&nbsp; Canvas particle network &nbsp;·&nbsp; Scroll-driven animations
 

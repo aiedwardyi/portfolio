@@ -5,6 +5,11 @@ import {
   JetBrains_Mono,
   Noto_Sans_KR,
 } from "next/font/google";
+import "@fontsource/pretendard/400.css";
+import "@fontsource/pretendard/500.css";
+import "@fontsource/pretendard/600.css";
+import "@fontsource/pretendard/700.css";
+import "@fontsource/pretendard/800.css";
 import "./globals.css";
 
 const sora = Sora({
@@ -66,6 +71,37 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Edward Yi",
+  alternateName: "에드워드 이",
+  jobTitle: "AI Engineer, Founder",
+  url: "https://edwardyi.dev",
+  image: "https://edwardyi.dev/profile.png",
+  description:
+    "AI engineer and founder. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems, developer tools, and medical AI with a patent pending.",
+  sameAs: [
+    "https://github.com/aiedwardyi",
+    "https://x.com/aiedwardyi",
+    "https://linkedin.com/in/aiedwardyi",
+    "https://t.me/aiedwardyi",
+  ],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Multi-Agent Systems",
+    "Large Language Models",
+    "Computer Vision",
+    "Full-Stack Engineering",
+    "Blockchain",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Seoul",
+    addressCountry: "KR",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,7 +112,13 @@ export default function RootLayout({
       lang="en"
       className={`${sora.variable} ${instrument.variable} ${jetbrains.variable} ${notoKr.variable} antialiased`}
     >
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

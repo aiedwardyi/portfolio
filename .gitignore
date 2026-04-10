@@ -52,4 +52,4 @@ og-preview.png
 
 # local working files (test screenshots, translation review docs)
 /*.png
-/korean-review.md
+/korean-review*.md

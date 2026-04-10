@@ -80,15 +80,17 @@ export default function ClientPage({
 
       {/* Content */}
       <Navigation />
-      <Hero />
-      <Marquee />
-      <Projects />
-      <SectionDivider />
-      <About />
-      <SectionDivider />
-      <Experience />
-      <SectionDivider />
-      <Contact />
+      <main>
+        <Hero />
+        <Marquee />
+        <Projects />
+        <SectionDivider />
+        <About />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Contact />
+      </main>
 
       {/* Footer */}
       <footer

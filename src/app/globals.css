@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @import "tailwindcss";
 
 :root {
@@ -23,9 +22,9 @@
   --color-gold-light: var(--gold-light);
   --color-gold-glow: var(--gold-glow);
   --color-gold-glow-strong: var(--gold-glow-strong);
-  --font-sans: var(--font-sora), "Pretendard Variable", Pretendard, var(--font-noto-kr), system-ui, sans-serif;
-  --font-body: var(--font-instrument), "Pretendard Variable", Pretendard, var(--font-noto-kr), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), "Pretendard Variable", Pretendard, var(--font-noto-kr), monospace;
+  --font-sans: var(--font-sora), Pretendard, var(--font-noto-kr), system-ui, sans-serif;
+  --font-body: var(--font-instrument), Pretendard, var(--font-noto-kr), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), Pretendard, var(--font-noto-kr), monospace;
 }
 
 /* Tailwind v4 preflight handles resets */
@@ -42,7 +41,7 @@ h1, h2, h3 {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-body), "Pretendard Variable", Pretendard, var(--font-noto-kr), -apple-system, sans-serif;
+  font-family: var(--font-body), Pretendard, var(--font-noto-kr), -apple-system, sans-serif;
   overflow-x: hidden;
   line-height: 1.6;
   /* Korean text: break at word boundaries (spaces) instead of mid-syllable */
