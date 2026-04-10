@@ -83,22 +83,33 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
           <RevealOnScroll delay={0.2}>
             <div>
-              {/* Profile photo: ~140px on mobile centered, ~220px on desktop left-aligned */}
-              <div
-                className="relative w-[140px] h-[140px] md:w-[200px] md:h-[200px] rounded-full overflow-hidden mx-auto md:mx-0 mb-8 md:mb-10"
-                style={{
-                  border: "1px solid rgba(201,168,76,0.15)",
-                  boxShadow: "0 0 40px rgba(201,168,76,0.06)",
-                }}
-              >
-                <Image
-                  src="/profile.png"
-                  alt="Edward Yi"
-                  fill
-                  sizes="(max-width: 768px) 140px, 200px"
-                  style={{ objectFit: "cover" }}
-                  priority={false}
-                />
+              {/* Profile photo: ~140px on mobile centered, ~200px on desktop left-aligned */}
+              <div className="flex flex-col items-center md:items-start mb-8 md:mb-10">
+                <div
+                  className="relative w-[140px] h-[140px] md:w-[200px] md:h-[200px] rounded-full overflow-hidden mb-4 md:mb-5"
+                  style={{
+                    border: "1px solid rgba(201,168,76,0.15)",
+                    boxShadow: "0 0 40px rgba(201,168,76,0.06)",
+                  }}
+                >
+                  <Image
+                    src="/profile.png"
+                    alt={t.name}
+                    fill
+                    sizes="(max-width: 768px) 140px, 200px"
+                    style={{ objectFit: "cover" }}
+                    priority={false}
+                  />
+                </div>
+                <div className="text-[17px] md:text-[18px] font-semibold text-white leading-tight">
+                  {t.name}
+                </div>
+                <div
+                  className="text-[12px] md:text-[13px] font-mono tracking-[1.5px] mt-1.5"
+                  style={{ color: "var(--gold)" }}
+                >
+                  {t.role}
+                </div>
               </div>
               <div className="text-[16px] leading-[1.9]" style={{ color: "var(--text-muted)" }}>
                 {t.paragraphs.map((segments, i) => (

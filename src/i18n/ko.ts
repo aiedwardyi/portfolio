@@ -78,6 +78,8 @@ export const ko: Dictionary = {
   about: {
     eyebrow: "이런 사람입니다",
     heading: "소개",
+    name: "에드워드 이",
+    role: "AI 엔지니어 · 창업자",
     paragraphs: [
       [
         { type: "text", value: "저는 " },

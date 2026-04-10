@@ -49,6 +49,8 @@ export type Dictionary = {
   about: {
     eyebrow: string;
     heading: string;
+    name: string;
+    role: string;
     paragraphs: Segment[][];
     values: {
       ship: { title: string; description: string };

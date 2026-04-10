@@ -78,6 +78,8 @@ export const en: Dictionary = {
   about: {
     eyebrow: "Who I Am",
     heading: "About",
+    name: "Edward Yi",
+    role: "AI Engineer · Founder",
     paragraphs: [
       [
         { type: "text", value: "I spent " },
