@@ -88,7 +88,7 @@ export const en: Dictionary = {
         {
           type: "text",
           value:
-            " — 200+ products shipped, a 90+ developer organization, and clients who deployed ",
+            ". 200+ products shipped, a 90+ developer organization, and clients deploying ",
         },
         { type: "em", value: "$167M" },
         { type: "text", value: " in capital on infrastructure we built." },
@@ -99,7 +99,7 @@ export const en: Dictionary = {
         {
           type: "text",
           value:
-            " full-time — from multi-agent platforms to developer CLI tools to a medical AI system with a ",
+            " full-time. From multi-agent platforms to developer CLI tools to a medical AI system with a ",
         },
         { type: "em", value: "patent pending" },
         { type: "text", value: "." },
@@ -118,7 +118,7 @@ export const en: Dictionary = {
       ship: {
         title: "Ship First",
         description:
-          "I optimize for shipped products, real users, and feedback loops — not demoware.",
+          "I optimize for shipped products, real users, and feedback loops, not demoware.",
       },
       tool: {
         title: "Tool Builder",
@@ -128,7 +128,7 @@ export const en: Dictionary = {
       ownership: {
         title: "High Ownership",
         description:
-          "I think in outcomes, not functions — product, engineering, hiring, and execution all have to line up.",
+          "I think in outcomes, not functions. Product, engineering, hiring, and execution all have to line up.",
       },
     },
   },
@@ -137,23 +137,23 @@ export const en: Dictionary = {
     heading: "Experience",
     timeline: [
       {
-        period: "2026 — Present",
+        period: "2026 - Present",
         role: "Independent AI Engineer & Founder",
         company: "Seoul, South Korea",
         description:
           "Building AI products full-time. Archon (multi-agent delivery platform), medical AI (patent pending), developer tools. Full-stack AI engineering across LLM orchestration, computer vision, and multi-agent systems.",
       },
       {
-        period: "2017 — 2026",
+        period: "2017 - 2026",
         role: "President",
-        company: "Rock'n'Block — Blockchain Development Company",
+        company: "Rock'n'Block, Blockchain Development Company",
         description:
           "90+ developer organization, 200+ projects shipped. Partners raised $167M. Built DeFi protocols, crypto wallets, NFT marketplaces, and data streaming infrastructure.",
       },
       {
-        period: "2014 — 2017",
+        period: "2014 - 2017",
         role: "CEO",
-        company: "HitecLED — LED Solutions",
+        company: "HitecLED, LED Solutions",
         description:
           "Founded and operated LED lighting solutions company in Austin, TX. Hardware and software product development, supply chain management, and B2B sales.",
       },
@@ -168,7 +168,7 @@ export const en: Dictionary = {
         role: "First Servers · Age 14",
         company: "Counter-Strike & College",
         description:
-          "Ran two 32-player CS mod servers — both full 24/7. Rented dedicated servers, visited data centers, and monetized access. Started college the same year.",
+          "Ran two 32-player CS mod servers, both full 24/7. Rented dedicated servers, visited data centers, and monetized access. Started college the same year.",
       },
     ],
   },

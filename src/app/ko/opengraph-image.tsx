@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 import { join } from "path";
 
 export const runtime = "nodejs";
-export const alt = "에드워드 이 — 아이디어와 구현 사이, 완성된 가치를 전달합니다.";
+export const alt = "에드워드 이. 아이디어와 구현 사이, 완성된 가치를 전달합니다.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default async function Image() {
           padding: "0 80px",
         }}
       >
-        {/* Profile photo — circular, secondary to text */}
+        {/* Profile photo - circular, secondary to text */}
         <div
           style={{
             width: "260px",
@@ -54,7 +54,7 @@ export default async function Image() {
           />
         </div>
 
-        {/* Text content — dominant */}
+        {/* Text content - dominant */}
         <div
           style={{
             display: "flex",

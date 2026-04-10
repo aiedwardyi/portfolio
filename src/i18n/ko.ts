@@ -137,23 +137,23 @@ export const ko: Dictionary = {
     heading: "경력",
     timeline: [
       {
-        period: "2026 — 현재",
+        period: "2026 ~ 현재",
         role: "독립 AI 엔지니어 & 창업자",
         company: "대한민국 서울",
         description:
           "AI 제품을 풀타임으로 개발하고 있습니다. 대표적으로 Archon(멀티 에이전트 배포 플랫폼), 특허 출원 중인 의료 AI, 개발자 도구를 개발하고 있습니다. LLM 오케스트레이션, 컴퓨터 비전, 멀티 에이전트 시스템을 아우르는 풀스택 AI 엔지니어링을 전문으로 합니다.",
       },
       {
-        period: "2017 — 2026",
+        period: "2017 ~ 2026",
         role: "대표",
-        company: "Rock'n'Block — 블록체인 개발 회사",
+        company: "Rock'n'Block, 블록체인 개발 회사",
         description:
           "90명 이상 규모의 개발 조직을 운영하며 200개가 넘는 프로젝트를 출시했습니다. 파트너사들이 총 1억 6,700만 달러 규모의 자금을 유치했고, DeFi 프로토콜, 암호화폐 지갑, NFT 마켓플레이스, 데이터 스트리밍 인프라를 구축했습니다.",
       },
       {
-        period: "2014 — 2017",
+        period: "2014 ~ 2017",
         role: "대표",
-        company: "HitecLED — LED 솔루션",
+        company: "HitecLED, LED 솔루션",
         description:
           "미국 텍사스 오스틴에서 LED 조명 솔루션 회사를 창업하고 운영했습니다. 하드웨어와 소프트웨어 제품 개발, 공급망 관리, B2B 영업을 총괄했습니다.",
       },
@@ -176,5 +176,5 @@ export const ko: Dictionary = {
     eyebrow: "함께 일해요",
     heading: "연락처",
   },
-  footer: "디자인 및 개발 — Edward Yi · 2026",
+  footer: "디자인 및 개발 · Edward Yi · 2026",
 };

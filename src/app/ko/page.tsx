@@ -3,7 +3,7 @@ import ClientPage from "@/components/ClientPage";
 import { ko } from "@/i18n/ko";
 
 export const metadata: Metadata = {
-  title: "에드워드 이 — AI 엔지니어, 창업자, 제품 개발자",
+  title: "에드워드 이 | AI 엔지니어, 창업자, 제품 개발자",
   description:
     "실제로 동작하는 AI 시스템을 만듭니다. 8년간 개발팀을 이끌며 200개 이상의 제품을 출시했고, 현재는 AI 도구, 멀티 에이전트 시스템, 의료 AI를 개발하고 있습니다.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "에드워드 이 — AI 엔지니어, 창업자, 제품 개발자",
+    title: "에드워드 이 | AI 엔지니어, 창업자, 제품 개발자",
     description:
       "실제로 동작하는 AI 시스템을 만듭니다. 8년간 개발팀을 이끌며 200개 이상의 제품을 출시했고, 현재는 AI 도구, 멀티 에이전트 시스템, 의료 AI를 개발하고 있습니다.",
     url: "https://edwardyi.dev/ko",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "에드워드 이 — AI 엔지니어, 창업자, 제품 개발자",
+    title: "에드워드 이 | AI 엔지니어, 창업자, 제품 개발자",
     description:
       "실제로 동작하는 AI 시스템을 만듭니다. 8년간 개발팀을 이끌며 200개 이상의 제품을 출시했고, 현재는 AI 도구, 멀티 에이전트 시스템, 의료 AI를 개발하고 있습니다.",
     creator: "@aiedwardyi",

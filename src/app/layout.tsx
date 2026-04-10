@@ -36,12 +36,12 @@ const notoKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "Edward Yi — AI Engineer, Founder, Builder",
+  title: "Edward Yi | AI Engineer, Founder, Builder",
   description:
     "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
   metadataBase: new URL("https://edwardyi.dev"),
   openGraph: {
-    title: "Edward Yi — AI Engineer, Founder, Builder",
+    title: "Edward Yi | AI Engineer, Founder, Builder",
     description:
       "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
     url: "https://edwardyi.dev",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Edward Yi — AI Engineer, Founder, Builder",
+    title: "Edward Yi | AI Engineer, Founder, Builder",
     description:
       "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
     creator: "@aiedwardyi",
