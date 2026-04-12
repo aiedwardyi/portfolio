@@ -3,7 +3,6 @@
 import {
   Zap,
   Monitor,
-  Microscope,
   MessageSquare,
   GraduationCap,
   Code2,
@@ -212,33 +211,6 @@ export default function Projects() {
               >
                 GitHub →
               </a>
-            </div>
-          </BentoCard>
-
-          {/* Medical AI */}
-          <BentoCard delay={0.3} borderColor="rgba(201,168,76,0.08)">
-            <CardIcon>
-              <Microscope size={20} strokeWidth={1.5} style={{ color: "var(--gold)" }} />
-            </CardIcon>
-            <div
-              className="font-mono text-[10px] tracking-[3px] uppercase mb-3.5"
-              style={{ color: "var(--gold)" }}
-            >
-              {t.badges.patentPending}
-            </div>
-            <h3 className="text-[22px] font-bold mb-2.5 text-white">
-              {t.medical.title}
-            </h3>
-            <p
-              className="text-[13px] leading-[1.7]"
-              style={{ color: "var(--text-muted)" }}
-            >
-              {t.medical.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-5">
-              <TechPill>Python</TechPill>
-              <TechPill>PyTorch</TechPill>
-              <TechPill>Computer Vision</TechPill>
             </div>
           </BentoCard>
 

@@ -43,12 +43,12 @@ const notoKr = Noto_Sans_KR({
 export const metadata: Metadata = {
   title: "Edward Yi | AI Engineer, Founder, Builder",
   description:
-    "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
+    "I build AI systems that ship. 8 years leading dev teams, now building AI tooling and multi-agent systems.",
   metadataBase: new URL("https://edwardyi.dev"),
   openGraph: {
     title: "Edward Yi | AI Engineer, Founder, Builder",
     description:
-      "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
+      "I build AI systems that ship. 8 years leading dev teams, now building AI tooling and multi-agent systems.",
     url: "https://edwardyi.dev",
     siteName: "Edward Yi",
     locale: "en_US",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Edward Yi | AI Engineer, Founder, Builder",
     description:
-      "I build AI systems that ship. 8 years leading dev teams, now building AI tooling, multi-agent systems, and medical AI.",
+      "I build AI systems that ship. 8 years leading dev teams, now building AI tooling and multi-agent systems.",
     creator: "@aiedwardyi",
   },
   robots: { index: true, follow: true },
@@ -80,7 +80,7 @@ const personJsonLd = {
   url: "https://edwardyi.dev",
   image: "https://edwardyi.dev/profile.png",
   description:
-    "AI engineer and founder. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems, developer tools, and medical AI with a patent pending.",
+    "AI engineer and founder. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems and developer tools.",
   sameAs: [
     "https://github.com/aiedwardyi",
     "https://x.com/aiedwardyi",

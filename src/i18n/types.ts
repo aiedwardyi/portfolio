@@ -29,7 +29,6 @@ export type Dictionary = {
     badges: {
       featured: string;
       openSource: string;
-      patentPending: string;
       buildingNow: string;
       whatIWorkWith: string;
     };
@@ -41,7 +40,6 @@ export type Dictionary = {
       developersLabel: string;
     };
     monitor: { description: string };
-    medical: { title: string; description: string };
     quorum: { description: string };
     pyithon: { description: string };
     capabilities: string[];

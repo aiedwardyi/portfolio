@@ -13,7 +13,7 @@ export const ko: Dictionary = {
     headlineLine2Prefix: "완성된 가치를 ",
     headlineHighlight: "전달합니다.",
     description:
-      "AI 엔지니어이자 창업자. 8년간 90명 이상의 개발 조직을 이끌며 200개가 넘는 제품을 출시했습니다. 지금은 멀티 에이전트 시스템, 개발자 도구, 그리고 특허 출원 중인 의료 AI를 만들고 있습니다.",
+      "AI 엔지니어이자 창업자. 8년간 90명 이상의 개발 조직을 이끌며 200개가 넘는 제품을 출시했습니다. 지금은 멀티 에이전트 시스템과 개발자 도구를 만들고 있습니다.",
     viewMyWork: "프로젝트 보기",
     getInTouch: "연락하기",
     scroll: "스크롤",
@@ -23,7 +23,6 @@ export const ko: Dictionary = {
     "멀티 에이전트 시스템",
     "컴퓨터 비전",
     "블록체인",
-    "특허 출원 중",
     "풀스택",
     "창업자",
     "200+ 프로젝트 출시",
@@ -34,7 +33,6 @@ export const ko: Dictionary = {
     badges: {
       featured: "주요 프로젝트",
       openSource: "오픈소스",
-      patentPending: "특허 출원 중",
       buildingNow: "개발 중",
       whatIWorkWith: "사용 기술",
     },
@@ -52,11 +50,6 @@ export const ko: Dictionary = {
     monitor: {
       description:
         "Claude Code 전용 터미널 상태 표시줄. 실시간 사용량 추적, 별도의 의존성 없이 동작합니다. 터미널에서 사는 개발자를 위해 만들었습니다.",
-    },
-    medical: {
-      title: "의료 AI",
-      description:
-        "피부 병리 진단을 위한 의료 AI. 특허 출원 중이며, 임상 협업을 진행 중입니다.",
     },
     quorum: {
       description:
@@ -101,10 +94,8 @@ export const ko: Dictionary = {
         {
           type: "text",
           value:
-            "을 풀타임으로 만들고 있습니다. 멀티 에이전트 플랫폼, 개발자 CLI 도구, 그리고 ",
+            "을 풀타임으로 만들고 있습니다. 멀티 에이전트 플랫폼, 개발자 CLI 도구, 풀스택 애플리케이션까지 다양한 영역에서 개발하고 있습니다.",
         },
-        { type: "em", value: "특허 출원 중" },
-        { type: "text", value: "인 의료 AI 시스템까지 다양한 영역에서 개발하고 있습니다." },
       ],
       [
         {
@@ -143,7 +134,7 @@ export const ko: Dictionary = {
         role: "독립 AI 엔지니어 & 창업자",
         company: "대한민국 서울",
         description:
-          "AI 제품 개발에 풀타임으로 집중하고 있습니다. 대표적으로 Archon(멀티 에이전트 배포 플랫폼), 특허 출원 중인 의료 AI, 개발자 도구를 개발하고 있습니다. LLM 오케스트레이션, 컴퓨터 비전, 멀티 에이전트 시스템을 아우르는 풀스택 AI 엔지니어링을 전문으로 합니다.",
+          "AI 제품 개발에 풀타임으로 집중하고 있습니다. 대표적으로 Archon(멀티 에이전트 배포 플랫폼)과 개발자 도구를 개발하고 있습니다. LLM 오케스트레이션과 멀티 에이전트 시스템을 아우르는 풀스택 AI 엔지니어링을 전문으로 합니다.",
       },
       {
         period: "2017 ~ 2026",

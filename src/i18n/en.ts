@@ -13,7 +13,7 @@ export const en: Dictionary = {
     headlineLine2Prefix: "that ",
     headlineHighlight: "ship.",
     description:
-      "Founder and senior AI engineer. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems, developer tools, and medical AI with a patent pending.",
+      "Founder and senior AI engineer. 8 years leading a 90+ developer organization across 200+ shipped products. Now building multi-agent systems and developer tools.",
     viewMyWork: "View My Work",
     getInTouch: "Get in Touch",
     scroll: "Scroll",
@@ -23,7 +23,6 @@ export const en: Dictionary = {
     "Multi-Agent Systems",
     "Computer Vision",
     "Blockchain",
-    "Patent Pending",
     "Full-Stack",
     "Founder",
     "200+ Projects Shipped",
@@ -34,7 +33,6 @@ export const en: Dictionary = {
     badges: {
       featured: "Featured",
       openSource: "Open Source",
-      patentPending: "Patent Pending",
       buildingNow: "Building Now",
       whatIWorkWith: "What I Work With",
     },
@@ -52,11 +50,6 @@ export const en: Dictionary = {
     monitor: {
       description:
         "Terminal statusline for Claude Code. Real-time quota tracking, zero dependencies. Built for devs who live in the CLI.",
-    },
-    medical: {
-      title: "Medical AI",
-      description:
-        "Medical AI for dermatological pathology. Patent pending. Clinical collaboration active.",
     },
     quorum: {
       description:
@@ -101,10 +94,8 @@ export const en: Dictionary = {
         {
           type: "text",
           value:
-            " full-time. From multi-agent platforms to developer CLI tools to a medical AI system with a ",
+            " full-time. Multi-agent platforms, developer CLI tools, and full-stack applications.",
         },
-        { type: "em", value: "patent pending" },
-        { type: "text", value: "." },
       ],
       [
         {
@@ -143,7 +134,7 @@ export const en: Dictionary = {
         role: "Independent AI Engineer & Founder",
         company: "Seoul, South Korea",
         description:
-          "Building AI products full-time. Archon (multi-agent delivery platform), medical AI (patent pending), developer tools. Full-stack AI engineering across LLM orchestration, computer vision, and multi-agent systems.",
+          "Building AI products full-time. Archon (multi-agent delivery platform), developer tools, and full-stack AI engineering across LLM orchestration and multi-agent systems.",
       },
       {
         period: "2017 - 2026",
